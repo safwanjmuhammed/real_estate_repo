@@ -22,12 +22,9 @@ class AppRouter {
     ],
   );
 
-  /// Root navigator key.
   static final _rootKey = GlobalKey<NavigatorState>(
     debugLabel: 'root_navigator_key',
   );
 
-  /// The BuildContext of the root navigator key.
-  /// This will be null before router initialization, so use with caution.
   static BuildContext? get context => _rootKey.currentContext;
 }

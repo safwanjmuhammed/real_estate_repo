@@ -8,8 +8,10 @@ This application leverages Flutter to create a responsive real estate listing in
 ## Getting Started
 
 ### Prerequisites
-- [Flutter SDK](https://flutter.dev/docs/get-started/install) version Important Note: Extensive testing has revealed potential issues with SDK versions released after 3.29.2. To ensure stability and optimal performance, we are intentionally restricting our SDK dependency to version ^3.29.2
-- An IDE (e.g., VS Code, Android Studio) with Flutter support
+- [Flutter SDK](https://flutter.dev/docs/get-started/install) 
+- An IDE (e.g., VS Code, Android Studio) with Flutter support.
+- Channel : stable
+- version : 3.32.8 
 - A connected emulator or physical device
 
 ### Installation
