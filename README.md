@@ -53,24 +53,5 @@ This application leverages Flutter to create a responsive real estate listing in
 - `google_fonts`: ^6.2.1 - Custom fonts.
 - `go_router`: ^14.6.2 - Navigation.
 
-## Usage
-- The app displays a horizontal list of property cards on the home screen.
-- Data is fetched asynchronously and managed by `HomeNotifier`.
-- Run `flutter run` to see the UI, which includes loading and error states.
 
-## License
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details (if applicable, create one if needed).
-
-## Notes
-- Ensure `build_runner` is executed after any changes to annotated files to avoid runtime errors.
-- Replace the simulated data in `use_cases.dart` with real API calls using `dio` for production use.
-- Customize the UI further by adjusting colors, fonts, or adding assets as needed.
-
----
-
-### Key Points in the README
-- **Run Build Runner**: Highlighted as a critical step with a dedicated section and a note to run it after modifying annotated files.
-- **Setup Instructions**: Clear steps for installing dependencies and running the app, without Git-related content.
-- **Structure and Usage**: Provides an overview to help users understand the project layout and functionality.
-- **No Git Content**: Removed all references to cloning, branching, or pull requests.
 
