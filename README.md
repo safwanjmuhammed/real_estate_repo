@@ -8,7 +8,7 @@ This application leverages Flutter to create a responsive real estate listing in
 ## Getting Started
 
 ### Prerequisites
-- [Flutter SDK](https://flutter.dev/docs/get-started/install) (version compatible with SDK ^3.29.2) NB: Versions after this have issues so sticking with this.
+- [Flutter SDK](https://flutter.dev/docs/get-started/install) version Important Note: Extensive testing has revealed potential issues with SDK versions released after 3.29.2. To ensure stability and optimal performance, we are intentionally restricting our SDK dependency to version ^3.29.2
 - An IDE (e.g., VS Code, Android Studio) with Flutter support
 - A connected emulator or physical device
 
@@ -19,6 +19,8 @@ This application leverages Flutter to create a responsive real estate listing in
    ```bash
    flutter pub get
    ```
+
+
 
 2. **Run Build Runner**
    - This project uses `freezed` and `json_serializable`, which require generating files. Run the build runner to generate these files:
@@ -33,18 +35,6 @@ This application leverages Flutter to create a responsive real estate listing in
      ```bash
      flutter run
      ```
-
-## Project Structure
-- `lib/main.dart`: Entry point of the application.
-- `src/feature/home_screen/`: Contains the home screen feature.
-  - `data/model/`: Data models (e.g., `property_model.dart`).
-  - `domain/use_cases.dart`: Business logic for fetching data.
-  - `presentation/`: UI and provider logic.
-    - `provider/`: State management (e.g., `home_notifier.dart`, `home_state.dart`).
-    - `utils/`: Utility functions (e.g., `property_utils.dart`).
-    - `widgets/`: Reusable widgets (e.g., `property_card.dart`).
-    - `screen/`: Screen implementations (e.g., `home_screen.dart`).
-
 ## Dependencies
 - `flutter_riverpod`: ^2.6.1 - State management.
 - `freezed_annotation`: ^2.4.4 - Immutable data models.
