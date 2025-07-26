@@ -25,7 +25,7 @@ This application leverages Flutter to create a responsive real estate listing in
      ```bash
      flutter pub run build_runner build --delete-conflicting-outputs
      ```
-   - **Important**: Run this command whenever you modify files with `@freezed` or `@JsonSerializable` annotations (e.g., `property_model.dart` or `home_state.dart`) to ensure the generated files (`*.freezed.dart`, `*.g.dart`) are up to date. Use the `--delete-conflicting-outputs` flag to resolve any conflicts.
+ 
 
 3. **Run the Application**
    - Ensure an emulator or device is connected.

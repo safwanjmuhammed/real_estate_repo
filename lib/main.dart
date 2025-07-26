@@ -4,10 +4,12 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:iroid_application/src/app.dart';
 import 'package:iroid_application/src/config/app_config.dart';
 
-void main() {
+void main() async {
   WidgetsFlutterBinding.ensureInitialized();
-  loadEnv();
+  await loadEnv();
   runApp(ProviderScope(child: const MyApp()));
 }
 
-Future<void> loadEnv() async => await AppConfig.loadEnv();
+Future<void> loadEnv() async {
+  await AppConfig.loadEnv();
+}

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:iroid_application/src/config/theme/app_color.dart';
 import 'package:iroid_application/src/constants/app_assets.dart';
 import 'package:iroid_application/src/feature/home_screen/presentation/provider/home_provider.dart';
 import 'package:iroid_application/src/feature/home_screen/presentation/widgets/custom_app_bar.dart';
@@ -45,7 +46,12 @@ class HomeScreen extends ConsumerWidget {
                 builder: (context, WidgetRef ref, child) {
                   final state = ref.watch(homeNotifierProvider);
                   return state.when(
-                    loading: () => Center(child: CircularProgressIndicator()),
+                    loading:
+                        () => Center(
+                          child: CircularProgressIndicator(
+                            color: AppColor.black,
+                          ),
+                        ),
                     data: (data) {
                       return SizedBox(
                         height: 500,
