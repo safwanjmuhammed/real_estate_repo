@@ -1,0 +1,1 @@
+enum PropertyStatus { forSale, forRent }
