@@ -6,7 +6,7 @@ class DioServiceInterceptor extends Interceptor {
 
   @override
   void onRequest(RequestOptions options, RequestInterceptorHandler handler) {
-    options.headers['Authorization'] = 'Bearer ${AppConfig.accessToken}';
+    options.headers['Authorization'] = 'Bearer ${AppConfig.token}';
     super.onRequest(options, handler);
   }
 
