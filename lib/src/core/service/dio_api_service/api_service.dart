@@ -20,7 +20,7 @@ class DioApiService implements IApiService {
 
   Dio _createDio() {
     return Dio(
-      BaseOptions(baseUrl: AppConfig.apiBaseUrl),
+      BaseOptions(baseUrl: AppConfig.baseUrlAccessKey),
     )..interceptors.addAll([DioServiceInterceptor(), if (!kReleaseMode) ...[]]);
   }
 
