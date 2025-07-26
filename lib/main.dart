@@ -2,7 +2,8 @@ import 'package:flutter/material.dart';
 
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:iroid_application/src/app.dart';
-import 'package:iroid_application/src/config/app_config.dart';
+
+import 'package:iroid_application/src/core/service/env_service/env_service.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -11,5 +12,5 @@ void main() async {
 }
 
 Future<void> loadEnv() async {
-  await AppConfig.loadEnv();
+  await EnvService.loadEnv();
 }

@@ -6,6 +6,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:iroid_application/src/config/app_config.dart';
 import 'package:iroid_application/src/core/service/dio_api_service/api_service_interceptor.dart';
 import 'package:iroid_application/src/core/service/dio_api_service/interface/api_service_interface.dart';
+import 'package:iroid_application/src/core/service/env_service/env_service.dart';
 
 final dioApiService = Provider.autoDispose<IApiService>(
   (ref) => DioApiService(),
@@ -20,7 +21,7 @@ class DioApiService implements IApiService {
 
   Dio _createDio() {
     return Dio(
-      BaseOptions(baseUrl: AppConfig.getBaseUrl() ?? ''),
+      BaseOptions(baseUrl: EnvService.getBaseUrl() ?? ''),
     )..interceptors.addAll([DioServiceInterceptor(), if (!kReleaseMode) ...[]]);
   }
 

@@ -15,12 +15,7 @@ import 'package:flutter_dotenv/flutter_dotenv.dart';
 class EnvService {
   /// Loads the .env file into the application's environment.
   ///
-  /// This method asynchronously loads environment variables from the specified
-  /// .env file using the `flutter_dotenv` package. The file is expected to be
-  /// located at the path 'env/.env' relative to the project root.
-  ///
   /// Throws an [Exception] if the .env file cannot be loaded due to file absence,
-
   static Future<void> loadEnv() async {
     try {
       await dotenv.load(fileName: 'env/.env');
@@ -29,19 +24,11 @@ class EnvService {
     }
   }
 
-  /// Retrieves the value of an environment variable by its key.
-  ///
-  /// Returns the value associated with the provided [key] from the loaded
-  /// environment variables. If the key does not exist, returns `null`.
-  ///
-  /// [key] The name of the environment variable to retrieve.
-  ///
-  /// Returns a [String] value of the environment variable, or `null` if the key
-  /// is not found.
-  ///
-  /// Example:
+  static String? getApiToken() {
+    return dotenv.env['API_TOKEN'];
+  }
 
-  static String? get(String key) {
-    return dotenv.env[key];
+  static String? getBaseUrl() {
+    return dotenv.env['BASE_URL'];
   }
 }
