@@ -1,5 +1,3 @@
-# iroid_application
-
 A new Flutter project designed to showcase real estate listings with a modern UI and state management using Riverpod.
 
 ## Overview
